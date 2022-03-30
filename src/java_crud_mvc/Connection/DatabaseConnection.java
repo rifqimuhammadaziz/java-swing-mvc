@@ -5,8 +5,8 @@
 package java_crud_mvc.Connection;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
-import com.mysql.jdbc.Driver;
 import java.sql.SQLException;
+import java.sql.Connection;
 
 /**
  *
@@ -14,16 +14,16 @@ import java.sql.SQLException;
  */
 public class DatabaseConnection {
     
-    static Driver connection;
+    static Connection connection;
     
-    public static Driver connection() {
+    public static Connection connection() {
         if (connection == null) {
             MysqlDataSource data = new MysqlDataSource();
             data.setDatabaseName("java_swing_mvc");
             data.setUser("root");
             data.setPassword("root");
             try {
-                connection = (Driver) data.getConnection();
+                connection = data.getConnection();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

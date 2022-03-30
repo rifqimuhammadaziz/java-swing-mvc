@@ -41,10 +41,6 @@ public class MemberDAO implements MemberImpl{
             statement.setString(3, member.getAddress());
             statement.setString(4, member.getMemberType());
             statement.executeUpdate();
-            ResultSet result = statement.getGeneratedKeys();
-            while (result.next()) {
-                member.setId(result.getInt(1));
-            }
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {

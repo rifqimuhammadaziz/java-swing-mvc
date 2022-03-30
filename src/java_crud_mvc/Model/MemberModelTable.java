@@ -31,26 +31,26 @@ public class MemberModelTable extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        return switch (columnIndex) {
-            case 0 -> listMember.get(rowIndex).getId();
-            case 1 -> listMember.get(rowIndex).getName();
-            case 2 -> listMember.get(rowIndex).getPhoneNumber();
-            case 3 -> listMember.get(rowIndex).getAddress();
-            case 4 -> listMember.get(rowIndex).getMemberType();
-            default -> null;
-        };
+        switch (columnIndex) {
+            case 0: return listMember.get(rowIndex).getId();
+            case 1: return listMember.get(rowIndex).getName();
+            case 2: return listMember.get(rowIndex).getPhoneNumber();
+            case 3: return listMember.get(rowIndex).getAddress();
+            case 4: return listMember.get(rowIndex).getMemberType();
+            default: return null;
+        }
     }
     
     @Override
     public String getColumnName(int columnIndex) {
-        return switch (columnIndex) {
-            case 0 -> "ID/CODE";
-            case 1 -> "NAME";
-            case 2 -> "PHONE NUMBER";
-            case 3 -> "ADDRESS";
-            case 4 -> "MEMBER TYPE";
-            default -> null;
-        };
+        switch (columnIndex) {
+            case 0: return "ID/CODE";
+            case 1: return "NAME";
+            case 2: return "PHONE NUMBER";
+            case 3: return "ADDRESS";
+            case 4: return"MEMBER TYPE";
+            default: return null;
+        }
     }
     
 }

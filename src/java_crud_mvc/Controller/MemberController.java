@@ -66,7 +66,7 @@ public class MemberController {
             member.setMemberType(memberFrame.getCbMemberType().getSelectedItem().toString());
             
             memberImpl.insert(member);
-            JOptionPane.showMessageDialog(null, "Success Save Data!", "Success", 0);
+            JOptionPane.showMessageDialog(null, "Success Save Data!", "Success", 1);
         } else {
             JOptionPane.showMessageDialog(memberFrame, "Data cannot be null!", "Error", 0);
         }

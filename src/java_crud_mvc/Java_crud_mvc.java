@@ -4,6 +4,8 @@
  */
 package java_crud_mvc;
 
+import java_crud_mvc.View.MemberView;
+
 /**
  *
  * @author Lenovo
@@ -15,6 +17,7 @@ public class Java_crud_mvc {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        new MemberView().setVisible(true);
     }
     
 }
